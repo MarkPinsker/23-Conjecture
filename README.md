@@ -1,10 +1,10 @@
 # Warings
-Waring's solutions to n = x^2 + y^2 + z^3 + w^3
+Waring's solutions to \$n = x^2 + y^2 + z^3 + w^3$
 
 ## Why
-It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that n = x^2 + y^2 + z^2 + w^2 always has integer solutions for all positive n.
-It is also true that n = x^2 + y^2 + z^2 + w^3 also always has integer solutions.
-But what about n = x^2 + y^2 + z^3 + w^3 ?
+It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that \$n = x^2 + y^2 + z^2 + w^2$ always has integer solutions for all positive n.
+It is also true that \$n = x^2 + y^2 + z^2 + w^3$ also always has integer solutions.
+But what about \$n = x^2 + y^2 + z^3 + w^3$ ?
 My conjecture is that the only value of n where this cannot be true is for n=23.
 To my knowledge this has never been proven.
 The attached Python program attempts to give a lower limit on n up to which this conjecture is true.
