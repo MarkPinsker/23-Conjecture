@@ -11,12 +11,13 @@ xfloorstart = int(data[0])
 xfloorend = int(data[1])
 progressfile.close()
 z = 0 
+third=1./3.
 ##############################################################################
 #sum of two cubes and a square
 ##############################################################################
 squareShell = 2 * xfloorend -1 
-squareShellRoot = math.floor(math.sqrt(squareShell))
-squareShellCubeRoot = math.floor(squareShell ** ( 1/3))
+squareShellRoot = math.floor(math.sqrt(squareShell)) + 1
+squareShellCubeRoot = math.floor(squareShell ** third) + 1
 sumOf2CubesandSquare = [0 for i in range(squareShell)] 
 
 for i in range(squareShellRoot):
@@ -72,7 +73,7 @@ datestring=current_date.strftime('%Y-%m-%dT%H:%M:%S.%f%z')
 f.write(sys.argv[0] + " Parameter 1 " + sys.argv[1] + " " + datestring + "\n")
 nextfloor2=xfloorstart*xfloorstart
 xfloorstart=xfloorstart+1
-third=1./3.
+
 for xfloor in range(xfloorstart,xfloorend):
 
 	xfloor2 = nextfloor2
