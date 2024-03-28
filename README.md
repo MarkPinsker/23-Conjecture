@@ -27,3 +27,11 @@ The attached Python program attempts to give a lower limit on n up to which this
    
 3. In command prompt
    py SumOf2SquaresAnd2Cubesv3.py parameterfile.txt 
+
+## How does it work
+
+The program splits into three main parts, the first two set up arrays which are used to optimise the third part which loops through values of n and finds candidate values of x,y,z,and w.
+
+### Calculate all values of \$y^2 + z^3 +w^3$
+### Calculate all possible mod 63 values for which \$m = z^3 + w^3$
+### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
