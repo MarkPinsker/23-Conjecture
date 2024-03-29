@@ -51,7 +51,22 @@ This section has 5 nested loops:-
 
 The current code does not use the symmetry of the equation - the fact that without loss of generality if \$n = x^2 + y^2 + z^3 + w^3$ then \$n = x^2 + y^2 + w^3 + z^3$ so you only need to check z >= w . 
 
-This slows down finding candidates as for example if \$1000 = n - x^2 - y^2$ then you only need to check z = 8 , 9 , 10 and checking z = 0, .. , 7 is unnecessary.     
+This slows down finding candidates as for example if \$1000 = n - x^2 - y^2$ then you only need to check z = 8 , 9 , 10 and checking z = 0, .. , 7 is unnecessary.
+Looping through is complicated becasue we are only checking certain values of z mod 63 depending on n,x, and y.
+
+Lets call this cubic sum residual r so we can say \$r = n - x^2 - y^2$
+
+We need to quickly calculate the values of m and i which give us candidate values for z:-
+
+\$z = 63 m + f(r,i)$
+
+Maximum of z cubed is r and minimum of z cubed is r/2.
+
+\$\sqrt[3]{r} \ge z \ge \sqrt[3]{\frac{r}{2}} $
+
+\$\sqrt[3]{r} \ge 63 m + f(r,i) \ge \sqrt[3]{\frac{r}{2}} $
+
+The maximum and minimum values of m are quick to work out but maximum and minimum values of i rely on an inverse function of f to be calculated in advance.
 
 ## Results
    
