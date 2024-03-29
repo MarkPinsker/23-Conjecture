@@ -32,8 +32,11 @@ The attached Python program attempts to give a lower limit on n up to which this
 
 The program splits into three main parts, the first two set up arrays which are used to optimise the third part which loops through values of n and finds candidate values of x,y,z,and w.
 
-### Calculate all values of \$y^2 + z^3 +w^3$
+### Calculate all values which can not be written as \$y^2 + z^3 +w^3$
+See [OEIS A022557](https://oeis.org/A022557)
+
 ### Calculate all possible mod 63 values for which \$m = z^3 + w^3$
+
 ### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 5 nested loops:-
 1. Loop through \$floor(\sqrt{n})$
