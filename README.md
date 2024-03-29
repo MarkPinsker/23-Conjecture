@@ -43,4 +43,11 @@ This section has 5 nested loops:-
 2. Loop through n
 3. Loop through x ( Highest to lowest )
 4. Loop though y ( Highest to lowest )
-5. Loop through z ( lowest to highest ). Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible. 
+5. Loop through z ( lowest to highest ). Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible.
+
+## Results
+   
+| Start Date(UTC)  | End Date(UTC) | Maximum n | Posted by |
+| ------------- | ------------- | ------------- | ------------- |
+| 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker |
+
