@@ -26,7 +26,9 @@ The attached Python program attempts to give a lower limit on n up to which this
    2.2. Last square root of n to be calculated.
    
 3. In command prompt
-   py SumOf2SquaresAnd2Cubesv3.py parameterfile.txt 
+   py SumOf2SquaresAnd2Cubesv3.py parameterfile.txt
+
+There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
 
 ## How does it work
 
@@ -44,6 +46,12 @@ This section has 5 nested loops:-
 3. Loop through x ( Highest to lowest )
 4. Loop though y ( Highest to lowest )
 5. Loop through z ( lowest to highest ). Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible.
+
+## Proposed improvements
+
+The current code does not use the symmetry of the equation - the fact that without loss of generality if \$n = x^2 + y^2 + z^3 + w^3$ then \$n = x^2 + y^2 + w^3 + z^3$ so you only need to check z >= w . 
+
+This slows down finding candidates as for example if \$1000 = n - x^2 - y^2$ then you only need to check z = 8 , 9 , 10 and checking z = 0, .. , 7 is unnecessary.     
 
 ## Results
    
