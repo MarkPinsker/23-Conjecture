@@ -35,3 +35,9 @@ The program splits into three main parts, the first two set up arrays which are 
 ### Calculate all values of \$y^2 + z^3 +w^3$
 ### Calculate all possible mod 63 values for which \$m = z^3 + w^3$
 ### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
+This section has 5 nested loops:-
+1. Loop through \$floor(\sqrt{n})$
+2. Loop through n
+3. Loop through x ( Highest to lowest )
+4. Loop though y ( Highest to lowest )
+5. Loop through z ( lowest to highest ). Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible. 
