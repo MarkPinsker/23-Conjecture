@@ -47,7 +47,7 @@ This section has 5 nested loops:-
 
 ## Results
    
-| Start Date(UTC)  | End Date(UTC) | Maximum n | Posted by |
-| ------------- | ------------- | ------------- | ------------- |
-| 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker |
+| Start Date(UTC)  | End Date(UTC) | Maximum n | Posted by | System | Software |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
