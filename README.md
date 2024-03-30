@@ -73,4 +73,5 @@ The maximum and minimum values of m are quick to work out but maximum and minimu
 | Start Date(UTC)  | End Date(UTC) | Maximum n | Posted by | System | Software |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-03-26 19:32  | 2024-03-30 00:36  | 1,421,591,616 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
