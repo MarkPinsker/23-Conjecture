@@ -58,13 +58,13 @@ Lets call this cubic sum residual r so we can say \$r = n - x^2 - y^2$
 
 We need to quickly calculate the values of m and i which give us candidate values for z:-
 
-\$z = 63 m + f(r,i)$
+\$z = f(r,i)$
 
 Maximum of z cubed is r and minimum of z cubed is r/2.
 
 \$\sqrt[3]{r} \ge z \ge \sqrt[3]{\frac{r}{2}} $
 
-\$\sqrt[3]{r} \ge 63 m + f(r,i) \ge \sqrt[3]{\frac{r}{2}} $
+\$\sqrt[3]{r} \ge f(r,i) \ge \sqrt[3]{\frac{r}{2}} $
 
 The maximum and minimum values of m are quick to work out but maximum and minimum values of i rely on an inverse function of f to be calculated in advance.
 
@@ -73,5 +73,5 @@ The maximum and minimum values of m are quick to work out but maximum and minimu
 | Start Date(UTC)  | End Date(UTC) | Maximum n | Posted by | System | Software |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
-| 2024-03-26 19:32  | 2024-03-30 00:36  | 1,421,591,616 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-03-26 19:32  | 2024-03-30 20:58 | 1,688,059,396 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
