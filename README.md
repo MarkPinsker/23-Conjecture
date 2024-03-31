@@ -37,36 +37,19 @@ The program splits into three main parts, the first two set up arrays which are 
 ### Calculate all values which can not be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
 
+### Calculate for all numbers up to 8,000,000 if sum of two cubes
+
 ### Calculate all possible mod 63 values for which \$m = z^3 + w^3$
+
 
 ### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 5 nested loops:-
 1. Loop through \$floor(\sqrt{n})$
 2. Loop through n
 3. Loop through x ( Highest to lowest )
-4. Loop though y ( Highest to lowest )
-5. Loop through z ( lowest to highest ). Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible.
+4. Loop though y ( Highest to lowest ) and calculate residual.
+5. Check to see if residual is listed as sum of two cubes. Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible.
 
-## Proposed improvements
-
-The current code does not use the symmetry of the equation - the fact that without loss of generality if \$n = x^2 + y^2 + z^3 + w^3$ then \$n = x^2 + y^2 + w^3 + z^3$ so you only need to check z >= w . 
-
-This slows down finding candidates as for example if \$1000 = n - x^2 - y^2$ then you only need to check z = 8 , 9 , 10 and checking z = 0, .. , 7 is unnecessary.
-Looping through is complicated becasue we are only checking certain values of z mod 63 depending on n,x, and y.
-
-Lets call this cubic sum residual r so we can say \$r = n - x^2 - y^2$
-
-We need to quickly calculate the values of m and i which give us candidate values for z:-
-
-\$z = f(r,i)$
-
-Maximum of z cubed is r and minimum of z cubed is r/2.
-
-\$\sqrt[3]{r} \ge z \ge \sqrt[3]{\frac{r}{2}} $
-
-\$\sqrt[3]{r} \ge f(r,i) \ge \sqrt[3]{\frac{r}{2}} $
-
-The maximum and minimum values of m are quick to work out but maximum and minimum values of i rely on an inverse function of f to be calculated in advance.
 
 ## Results
    
@@ -74,4 +57,5 @@ The maximum and minimum values of m are quick to work out but maximum and minimu
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-03-26 19:32  | 2024-03-30 20:58 | 1,688,059,396 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-03-31 20:35  | 2024-03-31 20:50 | 3,000,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
