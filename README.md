@@ -26,13 +26,13 @@ The attached Python program attempts to give a lower limit on n up to which this
    2.2. Last square root of n to be calculated.
    
 3. In command prompt
-   py SumOf2SquaresAnd2Cubesv3.py parameterfile.txt
+   py SumOf2SquaresAnd2Cubesv2.py parameterfile.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
 
 ## How does it work
 
-The program splits into three main parts, the first two set up arrays which are used to optimise the third part which loops through values of n and finds candidate values of x,y,z,and w.
+The program splits into four main parts, the first three set up arrays which are used to optimise the fourth part which loops through values of n and finds candidate values of x and y.
 
 ### Calculate all values which can not be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
