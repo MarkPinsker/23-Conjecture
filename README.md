@@ -18,7 +18,7 @@ Professor Trevor Wooley of Bristol university replied to my email on the subject
 The attached Python program attempts to give a lower limit on n up to which this conjecture is true.
 
 ## How to run
-1. Download the file SumOf2SquaresAnd2Cubesv3.py into a windows file.
+1. Download the file SumOf2SquaresAnd2Cubesv2.py into a windows file.
 2. Create a parameter file in notepad with two rows:-
    
    2.1. First square root of n to be calculated.
@@ -47,8 +47,7 @@ This section has 5 nested loops:-
 1. Loop through \$floor(\sqrt{n})$
 2. Loop through n
 3. Loop through x ( Highest to lowest )
-4. Loop though y ( Highest to lowest ) and calculate residual.
-5. Check to see if residual is listed as sum of two cubes. Only values of z mod 63 are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible.
+4. Loop though y ( Highest to lowest ) and calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. Only values of y are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible mod 63.
 
 
 ## Results
