@@ -32,7 +32,7 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 
 ## How does it work
 
-The program splits into four main parts, the first three set up arrays which are used to optimise the fourth part which loops through values of n and finds candidate values of x and y.
+The program splits into four main parts, the first three precalculates arrays which are used to optimise the fourth part which loops through values of n and finds candidate values of x and y.
 
 ### Calculate all values which can not be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
