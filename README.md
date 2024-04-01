@@ -43,7 +43,7 @@ See [OEIS A022557](https://oeis.org/A022557)
 
 
 ### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
-This section has 5 nested loops:-
+This section has 4 nested loops:-
 1. Loop through \$floor(\sqrt{n})$
 2. Loop through n
 3. Loop through x ( Highest to lowest )
@@ -56,5 +56,5 @@ This section has 5 nested loops:-
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-03-26 19:32  | 2024-03-30 20:58 | 1,688,059,396 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
-| 2024-03-31 20:35  | 2024-04-01 06:43 | 35,488,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-03-31 20:35  | 2024-04-01 06:59 | 36,231,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
