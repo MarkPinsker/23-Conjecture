@@ -5,7 +5,7 @@ Waring's solutions to \$n = x^2 + y^2 + z^3 + w^3$
 It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that \$n = x^2 + y^2 + z^2 + w^2$ always has integer solutions for all positive n.
 It is also true that \$n = x^2 + y^2 + z^2 + w^3$ also always has integer solutions.
 But what about \$n = x^2 + y^2 + z^3 + w^3$ ?
-If the cubes are positive then there is a conjecture that they can be any natural number except 23. I have checked this conjecture up to a billion and not found any counter examples.
+If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 36 billion and not found any counter examples.
 
 Professor Trevor Wooley of Bristol university replied to my email on the subject on 11th April 2011:-
 
