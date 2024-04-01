@@ -44,9 +44,9 @@ See [OEIS A022557](https://oeis.org/A022557)
 
 ### 4. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
-1. Loop through \$\left\lfloor\sqrt{n}\right\rfloor$
-2. Loop through n from \$(\left\lfloor\sqrt{n}\right\rfloor)^2$ to \$(\left\lfloor\sqrt{n}\right\rfloor+1)^2-1$ but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
-3. Loop through x from \$x = \left\lfloor\sqrt{n}\right\rfloor$ ( Highest ) downwards.
+1. Loop through m. For a given n, m will be given by \$m=\left\lfloor\sqrt{n}\right\rfloor$
+2. Loop through n from \$m^2$ to \$(m+1)^2-1$ but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
+3. Loop through x from \$x = m$ ( Highest ) downwards.
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. Only use values of y for which \$n - x^2 - y^2 = z^3 + w^3$ is possible mod 63.
 
 
@@ -56,5 +56,5 @@ This section has 4 nested loops:-
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 2024-03-26 19:32  | 2024-03-29 10:00  | 1,226,540,484 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-03-26 19:32  | 2024-03-30 20:58 | 1,688,059,396 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
-| 2024-03-31 20:35  | 2024-04-01 06:59 | 36,231,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-03-31 20:35  | 2024-04-01 10:00 | 44,658,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
