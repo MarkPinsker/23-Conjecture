@@ -32,17 +32,17 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 
 ## How does it work
 
-The program splits into four main parts, the first three precalculates arrays which are used to optimise the fourth part which loops through values of n and finds candidate values of x and y.
+The program splits into four main parts, the first three precalculate arrays which are used to optimise the fourth part. 
+The fourth part loops through values of n and finds candidate values of x, y, z and w which rule n out as a sum of two squares and two positive cubes.
 
-### Calculate all values which can not be written as \$y^2 + z^3 +w^3$
+### 1. Calculate all positive integers which can not be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
 
-### Calculate for all numbers up to 8,000,000 if sum of two cubes
+### 2. Calculate for every positive integer up to 8,000,000 if sum of two cubes
 
-### Calculate all possible mod 63 values for which \$m = z^3 + w^3$
+### 3. Calculate all possible mod 63 values of the residual r for which \$r = z^3 + w^3$
 
-
-### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
+### 4. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
 1. Loop through \$\left\lfloor\sqrt{n}\right\rfloor$
 2. Loop through n from \$(\left\lfloor\sqrt{n}\right\rfloor)^2$ to \$(\left\lfloor\sqrt{n}\right\rfloor+1)^2-1$ but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
