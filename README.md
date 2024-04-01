@@ -44,10 +44,10 @@ See [OEIS A022557](https://oeis.org/A022557)
 
 ### Loop through vaLues of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
-1. Loop through \$floor(\sqrt{n})$
-2. Loop through n
-3. Loop through x ( Highest to lowest )
-4. Loop though y ( Highest to lowest ) and calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. Only values of y are used for which \$n - x^2 - y^2 = z^3 + w^3$ is possible mod 63.
+1. Loop through \$\left\lfloor\sqrt{n}\right\rfloor$
+2. Loop through n from \$(\left\lfloor\sqrt{n}\right\rfloor)^2$ to \$(\left\lfloor\sqrt{n}\right\rfloor+1)^2-1$ but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
+3. Loop through x from \$x = \left\lfloor\sqrt{n}\right\rfloor$ ( Highest ) downwards.
+4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. Only use values of y for which \$n - x^2 - y^2 = z^3 + w^3$ is possible mod 63.
 
 
 ## Results
