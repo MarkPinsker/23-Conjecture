@@ -15,7 +15,7 @@ third=1./3.
 ##############################################################################
 #sum of two cubes and a square
 ##############################################################################
-squareShell = 2 * xfloorend -1 
+squareShell = 2 * xfloorend + 1 
 squareShellRoot = math.floor(math.sqrt(squareShell)) + 1
 squareShellCubeRoot = math.floor(squareShell ** third) + 1
 sumOf2CubesandSquare = [0 for i in range(squareShell)] 
