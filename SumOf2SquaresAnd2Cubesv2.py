@@ -9,13 +9,15 @@ with open(progressfilename, 'r', encoding='utf-8') as progressfile:
     data = progressfile.readlines() 
 xfloorstart = int(data[0])
 xfloorend = int(data[1])
+zMax = int(data[2])
+zmaxCubed = zMax * zMax * zMax
 progressfile.close()
 z = 0 
 third=1./3.
 ##############################################################################
 #sum of two cubes and a square
 ##############################################################################
-squareShell = 2 * xfloorend + 1 
+squareShell = 2 * xfloorend + 1
 squareShellRoot = math.floor(math.sqrt(squareShell)) + 1
 squareShellCubeRoot = math.floor(squareShell ** third) + 1
 sumOf2CubesandSquare = [0 for i in range(squareShell)] 
@@ -66,12 +68,12 @@ for nMinusxsqmMod63 in range(base63):
 				zMod63Generator[nMinusxsqmMod63][y][0] = n
 				zMod63Generator[nMinusxsqmMod63][y][n] = z
 
-sumOf2cubes = [0 for i in range(8000000)]
-for x in range(200):
+sumOf2cubes = [0 for i in range(zmaxCubed)]
+for x in range(zMax):
 	xcubed = x * x * x
-	for y in range(200):
+	for y in range(zMax):
 		n =  xcubed + y * y * y
-		if ( n < 8000000 ):
+		if ( n < zmaxCubed ):
 			sumOf2cubes[n]=10000*x+y
 ##############################################################################
 # Calculate n = x^2 + y^2 + z^3 + w^3
