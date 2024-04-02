@@ -116,16 +116,9 @@ for xfloor in range(xfloorstart,xfloorend):
 			nMinusx2Minusy2 = nMinusxsqm - y * y
 # Loop downwards through possible y values if there are any
 			while ( ( y > 0 ) and ( nMinusx2Minusy2  >= 0 ) and notFound):
-				if ( noSumof2cubesin63 == 0 ): 
-					y = y - 1
-					ymod63 = y % base63
-					noSumof2cubesin63 = zMod63Generator[nMinusxsqmMod63][ymod63][0]
-					nMinusx2Minusy2 = nMinusxsqm - y * y
-				else:
-
-					if ( sumOf2cubes[nMinusx2Minusy2] > 0 ):
-						notFound = False
-#						print('n= ',n,',x=',x,',y= ',y,',z,w =',sumOf2cubes[nMinusx2Minusy2] )
+				if ( sumOf2cubes[nMinusx2Minusy2] > 0 ):
+					notFound = False
+#					print('n= ',n,',x=',x,',y= ',y,',z,w =',sumOf2cubes[nMinusx2Minusy2] )
 				y = y - 1
 				ymod63 = y % base63
 				noSumof2cubesin63 = zMod63Generator[nMinusxsqmMod63][ymod63][0]
