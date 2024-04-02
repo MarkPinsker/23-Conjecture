@@ -19,7 +19,7 @@ The attached Python program attempts to give a lower limit on n up to which this
 
 ## How to run
 1. Download the file SumOf2SquaresAnd2Cubesv2.py into a windows file.
-2. Create a parameter file in notepad with two rows:-
+2. Create a parameter file in notepad with three rows:-
    
    2.1. First square root of n to be calculated.
    
