@@ -24,8 +24,10 @@ The attached Python program attempts to give a lower limit on n up to which this
    2.1. First square root of n to be calculated.
    
    2.2. Last square root of n to be calculated.
+
+   2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion.
    
-3. In command prompt
+4. In command prompt
    py SumOf2SquaresAnd2Cubesv2.py parameterfile.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
