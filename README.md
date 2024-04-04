@@ -58,4 +58,5 @@ This section has 4 nested loops:-
 | 2024-03-26 19:32  | 2024-03-30 20:58 |   1,688,059,396 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-03-31 20:35  | 2024-04-02 20:45 |  92,549,808,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-04-02 20:45  | 2024-04-04 05:16 | 211,256,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
