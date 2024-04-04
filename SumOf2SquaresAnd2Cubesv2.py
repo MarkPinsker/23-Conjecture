@@ -37,6 +37,7 @@ for i in range(squareShell):
     if ( sumOf2CubesandSquare[i] == 0):
         NotSumOf1Squaresand2CubesNo = NotSumOf1Squaresand2CubesNo + 1
         NotSumOf1Squaresand2Cubes.append(i)
+NotSumOf1Squaresand2Cubes.append(10000000000000000)
 
 sumOf2cubes = [0 for i in range(zmaxCubed)]
 for x in range(zMax):
@@ -68,6 +69,7 @@ for xfloor in range(xfloorstart,xfloorend):
 			progressfile.writelines(data) 
 	increment = 0	
 	n = xfloor2 + NotSumOf1Squaresand2Cubes[increment]
+
 	#for n in range(xfloor2 , nextfloor2): 
 	while ( n < nextfloor2 ):
 
