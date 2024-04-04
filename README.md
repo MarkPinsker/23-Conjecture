@@ -5,7 +5,7 @@ Waring's solutions to \$n = x^2 + y^2 + z^3 + w^3$
 It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that \$n = x^2 + y^2 + z^2 + w^2$ always has integer solutions for all positive n.
 It is also true that \$n = x^2 + y^2 + z^2 + w^3$ also always has integer solutions.
 But what about \$n = x^2 + y^2 + z^3 + w^3$ ?
-If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 136 billion and not found any counter examples.
+If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 283 billion and not found any counter examples.
 
 Professor Trevor Wooley of Bristol university replied to my email on the subject on 11th April 2011:-
 
@@ -40,7 +40,7 @@ The fourth part loops through values of n and finds candidate values of x, y, z 
 ### 1. Calculate all positive integers which can not be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
 
-### 2. Calculate for every positive integer up to 8,000,000 if sum of two cubes
+### 2. Calculate for every positive integer up to cube of maximum z parameter if sum of two cubes
 
 ### 3. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
@@ -58,5 +58,5 @@ This section has 4 nested loops:-
 | 2024-03-26 19:32  | 2024-03-30 20:58 |   1,688,059,396 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-03-31 20:35  | 2024-04-02 20:45 |  92,549,808,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
-| 2024-04-02 20:45  | 2024-04-04 05:16 | 211,256,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
+| 2024-04-02 20:45  | 2024-04-04 20:40 | 283,620,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 |
 
