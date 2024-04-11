@@ -1,17 +1,51 @@
-import math,sys
+import math,sys,os,re
 from datetime import datetime
 ############################################################################
 # program to find all positive integer solutions of n = x^2 + y^2 + z^3 + w^3
 ############################################################################
-# read two command line parameters for start and end
+# Validate and read parameter file from suplied by command line parameter
+if len(sys.argv) != 2 :
+	print('Error. A single parameter needs to be supplied which is the name of a parameter file.')
+	sys.exit(1)
 progressfilename = sys.argv[1]
-with open(progressfilename, 'r', encoding='utf-8') as progressfile: 
-    data = progressfile.readlines() 
-xfloorstart = int(data[0])
-xfloorend = int(data[1])
-zMax = int(data[2])
-zmaxCubed = zMax * zMax * zMax
+try:
+	with open(progressfilename, 'r', encoding='utf-8') as progressfile: 
+		data = progressfile.readlines() 
+except IOError:
+	print('Error. Parameter file ',progressfilename,' could not be read.')
+	sys.exit(2)
 progressfile.close()
+
+# Validate parameters
+
+xfloorstart = 0
+xfloorend = 0
+zMax = 0
+for i in range(len(data)):
+	parmRow = data[i]
+	if re.search(r'Initial square root of n:(\d+)',parmRow):
+		strFloorStart = re.search(r'Initial square root of n:(\d+)',parmRow)
+		xfloorstart = int(strFloorStart.group(1))
+		parmRowNo = i
+	if re.search(r'Final square root of n:(\d+)',parmRow):
+		strxfloorend = re.search(r'Final square root of n:(\d+)',parmRow)
+		xfloorend = int(strxfloorend.group(1))
+	if re.search(r'Maximum value of z:(\d+)',parmRow):
+		strzMax = re.search(r'Maximum value of z:(\d+)',parmRow)
+		zMax = int(strzMax.group(1))
+
+if ( xfloorstart == 0 ) :
+	print('Error. There should be a row in the parameter file matching Initial square root of n:nnnn but not found')
+	sys.exit(4)
+if ( xfloorend == 0 ) :
+	print('Error. There should be a row in the parameter file matching Final square root of n:nnnn but not found')
+	sys.exit(5)
+if ( zMax == 0 ) :
+	print('Error. There should be a row in the parameter file matching Maximum value of z:nnnn but not found')
+	sys.exit(6)
+
+zmaxCubed = zMax * zMax * zMax
+
 z = 0 
 third=1./3.
 print('Program to test the conjecture that 23 is the only positive integer that cannot be made by adding two squares and two positive cubes')
@@ -72,7 +106,7 @@ while ( xfloor < xfloorend ):
 
 	print('n = ', xfloor2)
 	f.write(str(xfloor) + "\n")
-	data[0]=str(xfloor)+"\n"
+	data[parmRowNo]='Initial square root of n:' + str(xfloor)+"\n"
 	with open(progressfilename, 'w', encoding='utf-8') as progressfile: 
 		progressfile.writelines(data) 
 

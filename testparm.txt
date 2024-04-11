@@ -1,0 +1,3 @@
+Initial square root of n:1
+Final square root of n:100
+Maximum value of z:30
