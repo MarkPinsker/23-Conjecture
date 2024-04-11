@@ -35,7 +35,7 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 ## How does it work
 
 The program splits into three main parts, the first two precalculate arrays which are used to optimise the third part. 
-The fourth part loops through values of n and finds candidate values of x, y, z and w which rule n out as a sum of two squares and two positive cubes.
+The third part loops through values of n and finds candidate values of x, y, z and w which rule n out as a sum of two squares and two positive cubes.
 
 ### 1. Calculate all positive integers up to specified limit which cannot be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
@@ -44,7 +44,7 @@ See [OEIS A022557](https://oeis.org/A022557)
 
 ### 3. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
-1. Loop through groups of square shells. The next square side is determined by adding twice the last square side to the previous one.$
+1. Loop through groups of square shells. The next square side is determined by adding twice the last square side to the previous one.
 2. Loop through n from inner to outer square shell, but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
 3. Loop through x from square root of n downwards.
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. 
