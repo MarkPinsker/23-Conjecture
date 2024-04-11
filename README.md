@@ -18,17 +18,17 @@ Professor Trevor Wooley of Bristol university replied to my email on the subject
 The attached Python program attempts to give a lower limit on n up to which this conjecture is true.
 
 ## How to run
-1. Download the file SumOf2SquaresAnd2Cubesv2.py into a windows file.
-2. Create a parameter file in notepad with three rows:-
+1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
+2. Edit the parameter file in notepad. The three rows mean:-
    
    2.1. First square root of n to be calculated.
    
-   2.2. Last square root of n to be calculated.
+   2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
 
    2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion.
    
 4. In command prompt
-   py SumOf2SquaresAnd2Cubesv2.py parameterfile.txt
+   py SumOf2SquaresAnd2Cubes.py params.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
 
@@ -37,16 +37,16 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 The program splits into three main parts, the first two precalculate arrays which are used to optimise the third part. 
 The fourth part loops through values of n and finds candidate values of x, y, z and w which rule n out as a sum of two squares and two positive cubes.
 
-### 1. Calculate all positive integers which can not be written as \$y^2 + z^3 +w^3$
+### 1. Calculate all positive integers up to specified limit which cannot be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
 
 ### 2. Calculate for every positive integer up to cube of maximum z parameter if sum of two cubes
 
 ### 3. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
-1. Loop through m. For a given n, m will be given by \$m=\left\lfloor\sqrt{n}\right\rfloor$
-2. Loop through n from \$m^2$ to \$(m+1)^2-1$ but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
-3. Loop through x from \$x = m$ ( Highest ) downwards.
+1. Loop through groups of square shells. The next square side is determined by adding twice the last square side to the previous one.$
+2. Loop through n from inner to outer square shell, but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
+3. Loop through x from square root of n downwards.
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. 
 
 
@@ -59,5 +59,5 @@ This section has 4 nested loops:-
 | 2024-03-31 20:35  | 2024-04-02 20:45 |  92,549,808,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
-| 2024-04-11 06:24  | 2024-04-11 11:02 | 1,000,094,002,209 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
+| 2024-04-11 06:24  | 2024-04-11 11:31 | 1,019,193,221,601 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
 
