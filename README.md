@@ -25,7 +25,7 @@ The attached Python program attempts to give a lower limit on n up to which this
    
    2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
 
-   2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion.
+   2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
    
 4. In command prompt
    py SumOf2SquaresAnd2Cubes.py params.txt
@@ -59,5 +59,5 @@ This section has 4 nested loops:-
 | 2024-03-31 20:35  | 2024-04-02 20:45 |  92,549,808,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
-| 2024-04-11 06:24  | 2024-04-13 06:61 | 3,001,414,186,601 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
+| 2024-04-11 06:24  | 2024-04-13 09:49 | 3,209,056,635,456 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
 
