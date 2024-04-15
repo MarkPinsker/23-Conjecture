@@ -19,13 +19,61 @@ The attached Python program attempts to give a lower limit on n up to which this
 
 ## How to run
 1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
-2. Edit the parameter file in notepad. The three rows mean:-
-   
-   2.1. First square root of n to be calculated.
-   
-   2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
 
-   2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
+2. Install bitarray using pip ( Python install package)
+   If you are using py   
+      C:\Users\Mark>py -m ensurepip --upgrade
+      Looking in links: c:\Users\Mark\AppData\Local\Temp\tmp8yul8agr
+      Requirement already satisfied: pip in c:\users\mark\appdata\local\programs\python\python312\lib\site-packages (24.0)
+      
+      C:\Users\Mark>python -m pip install bitarray
+      Collecting bitarray
+        Downloading bitarray-2.9.2-cp312-cp312-win_amd64.whl.metadata (35 kB)
+      Downloading bitarray-2.9.2-cp312-cp312-win_amd64.whl (126 kB)
+         ---------------------------------------- 126.2/126.2 kB 1.9 MB/s eta 0:00:00
+      Installing collected packages: bitarray
+      Successfully installed bitarray-2.9.2
+
+   If you are using pypy
+        Looking in links: c:\Users\Mark\AppData\Local\Temp\tmpf2g0sxwt
+      Processing c:\users\mark\appdata\local\temp\tmpf2g0sxwt\setuptools-65.5.0-py3-none-any.whl
+      Processing c:\users\mark\appdata\local\temp\tmpf2g0sxwt\pip-23.0.1-py3-none-any.whl
+      Installing collected packages: setuptools, pip
+        WARNING: The scripts pip3.10.exe and pip3.exe are installed in 'C:\Users\Mark\Downloads\pypy3.10-v7.3.15-win64\pypy3.10-v7.3.15-win64\Scripts' which is not on PATH.
+        Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+      Successfully installed pip-23.0.1 setuptools-65.5.0
+      
+      C:\Users\Mark\Downloads\pypy3.10-v7.3.15-win64\pypy3.10-v7.3.15-win64>pypy -m pip install bitarray
+      Collecting bitarray
+        Downloading bitarray-2.9.2-pp310-pypy310_pp73-win_amd64.whl (126 kB)
+           ---------------------------------------- 126.5/126.5 kB 7.3 MB/s eta 0:00:00
+      Installing collected packages: bitarray
+      Successfully installed bitarray-2.9.2
+      
+      [notice] A new release of pip is available: 23.0.1 -> 24.0
+      [notice] To update, run: pypy.exe -m pip install --upgrade pip
+      
+      C:\Users\Mark\Downloads\pypy3.10-v7.3.15-win64\pypy3.10-v7.3.15-win64>pypy.exe -m pip install --upgrade pip
+      Requirement already satisfied: pip in c:\users\mark\downloads\pypy3.10-v7.3.15-win64\pypy3.10-v7.3.15-win64\lib\site-packages (23.0.1)
+      Collecting pip
+        Downloading pip-24.0-py3-none-any.whl (2.1 MB)
+           ---------------------------------------- 2.1/2.1 MB 10.3 MB/s eta 0:00:00
+      Installing collected packages: pip
+        Attempting uninstall: pip
+          Found existing installation: pip 23.0.1
+          Uninstalling pip-23.0.1:
+            Successfully uninstalled pip-23.0.1
+        WARNING: The scripts pip.exe, pip3.10.exe and pip3.exe are installed in 'C:\Users\Mark\Downloads\pypy3.10-v7.3.15-win64\pypy3.10-v7.3.15-win64\Scripts' which is not on PATH.
+        Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+   
+3. Edit the parameter file in notepad. The three rows mean:-
+   
+   3.1. First square root of n to be calculated.
+   
+   3.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
+
+   3.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
    
 4. In command prompt
    py SumOf2SquaresAnd2Cubes.py params.txt
@@ -47,7 +95,7 @@ This section has 4 nested loops:-
 1. Loop through groups of square shells. The next square side is determined by adding twice the last square side to the previous one.
 2. Loop through n from inner to outer square shell, but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
 3. Loop through x from square root of n downwards.
-4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes. 
+4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
 
 ## Results
