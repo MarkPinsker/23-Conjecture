@@ -1,4 +1,5 @@
 import math,sys,os,re
+from bitarray import bitarray
 from datetime import datetime
 ############################################################################
 # program to find all positive integer solutions of n = x^2 + y^2 + z^3 + w^3
@@ -57,7 +58,9 @@ squareShell = 2 * xfloorend + 1
 print('Calculating list of natural numbers up to ',squareShell,' which are not the sum of a square and two cubes...')
 squareShellRoot = math.floor(math.sqrt(squareShell)) + 1
 squareShellCubeRoot = math.floor(squareShell ** third) + 1
-sumOf2CubesandSquare = [0 for i in range(squareShell)] 
+#sumOf2CubesandSquare = [0 for i in range(squareShell)] 
+sumOf2CubesandSquare = bitarray(squareShell)
+sumOf2CubesandSquare.setall(0)
 
 for i in range(squareShellRoot):
     i2 = i ** 2
