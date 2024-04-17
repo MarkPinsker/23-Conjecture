@@ -63,13 +63,17 @@ sumOf2CubesandSquare = bitarray(squareShell)
 sumOf2CubesandSquare.setall(0)
 
 for i in range(squareShellRoot):
-    i2 = i ** 2
-    for j in range(squareShellCubeRoot):
-        j2 = i2 + j ** 3
-        for k in range(j + 1):
-            n = j2 + k ** 3
-            if ( n < squareShell ):  
-                sumOf2CubesandSquare[n] = 1
+	i2 = i ** 2
+	remainder = squareShell - i2
+	squareShellCubeRoot = math.floor(remainder ** third) + 1
+	for j in range(squareShellCubeRoot):
+		j2 = i2 + j ** 3
+		n = j2
+		k = 0
+		while ( k <= j + 1) and ( n < squareShell ):
+			sumOf2CubesandSquare[n] = 1
+			k = k + 1
+			n = j2 + k ** 3
 print('Array created, now to list through it.')
 NotSumOf1Squaresand2Cubes = []
 for i in range(squareShell):
