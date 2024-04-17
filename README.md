@@ -20,6 +20,26 @@ The attached Python program attempts to give a lower limit on n up to which this
 ## How to run
 1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
 
+ 2. Edit the parameter file in notepad. The three rows mean:-
+   
+   2.1. First square root of n to be calculated.
+   
+   2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
+
+   2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
+   
+3. In command prompt
+   py SumOf2SquaresAnd2Cubes.py params.txt
+
+There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
+
+## How to run (Memory efficient )
+
+Because this program uses a large array of ones and zeroes it is more memory efficient but slower to use a bit array.
+
+The module to do this can be imported and v2 of the code uses this method, as follows:- 
+1. Download the file SumOf2SquaresAnd2Cubesv2.py and params.txt into a windows file.
+
 2. Install bitarray using pip ( Python install package)
    If you are using py   
       C:\Users\Mark>py -m ensurepip --upgrade
@@ -76,7 +96,7 @@ The attached Python program attempts to give a lower limit on n up to which this
    3.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
    
 4. In command prompt
-   py SumOf2SquaresAnd2Cubes.py params.txt
+   py SumOf2SquaresAnd2CubesV2.py params.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
 
