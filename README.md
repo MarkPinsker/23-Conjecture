@@ -20,13 +20,24 @@ The attached Python program attempts to give a lower limit on n up to which this
 ## How to run
 1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
 
- 2. Edit the parameter file in notepad. The three rows mean:-
+ 2. Edit the parameter file in notepad. The following three rows must be present:-
    
-   2.1. First square root of n to be calculated.
+   2.1. First square root of n to be calculated. 
+        Required: Yes
+        Syntax:- "Initial square root of n:{n}"
    
    2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
+        Required: Yes
+        Syntax:- "Final square root of n:{n}"
 
-   2.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
+   2.3. Maximum value of z that is checked. 
+        Required: Yes
+        Syntax:- "Maximum value of z:{n}"
+   Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
+
+   2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
+           Required: No
+           Syntax: "Use bitarray:true"
    
 3. In command prompt
    py SumOf2SquaresAnd2Cubes.py params.txt
