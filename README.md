@@ -31,20 +31,19 @@ The attached Python program attempts to give a lower limit on n up to which this
         Syntax:- "Final square root of n:{n}"
 
 #### 2.3. Maximum value of z that is checked. 
-   
         Required: Yes
         
         Syntax:- "Maximum value of z:{n}"
         
-   Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
+      Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
 
 #### 2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
-   
-           Required: No
+          Required: No
            
            Syntax: "Use bitarray:true"
    
 ### 3. In command prompt
+
    py SumOf2SquaresAnd2Cubes.py params.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
@@ -53,7 +52,7 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 
 Because this program uses a large array of ones and zeroes it is more memory efficient but slower to use a bit array.
 
-### 1. Install bitarray using pip ( Python install package)
+###  Install bitarray for py ( Python install package)
 
    If you are using py   
       C:\Users\Mark>py -m ensurepip --upgrade
@@ -68,7 +67,8 @@ Because this program uses a large array of ones and zeroes it is more memory eff
       Installing collected packages: bitarray
       Successfully installed bitarray-2.9.2
 
-   If you are using pypy
+###    Install bitarray for pypy ( Python install package)
+   
         Looking in links: c:\Users\Mark\AppData\Local\Temp\tmpf2g0sxwt
       Processing c:\users\mark\appdata\local\temp\tmpf2g0sxwt\setuptools-65.5.0-py3-none-any.whl
       Processing c:\users\mark\appdata\local\temp\tmpf2g0sxwt\pip-23.0.1-py3-none-any.whl
