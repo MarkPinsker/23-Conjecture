@@ -18,40 +18,43 @@ Professor Trevor Wooley of Bristol university replied to my email on the subject
 The attached Python program attempts to give a lower limit on n up to which this conjecture is true.
 
 ## How to run
-1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
+### 1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
 
- 2. Edit the parameter file in notepad. The following three rows must be present:-
+### 2. Edit the parameter file in notepad. The following three rows must be present:-
    
-   2.1. First square root of n to be calculated. 
+#### 2.1. First square root of n to be calculated. 
         Required: Yes
         Syntax:- "Initial square root of n:{n}"
    
-   2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
+#### 2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
         Required: Yes
         Syntax:- "Final square root of n:{n}"
 
-   2.3. Maximum value of z that is checked. 
+#### 2.3. Maximum value of z that is checked. 
+   
         Required: Yes
+        
         Syntax:- "Maximum value of z:{n}"
+        
    Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
 
-   2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
+#### 2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
+   
            Required: No
+           
            Syntax: "Use bitarray:true"
    
-3. In command prompt
+### 3. In command prompt
    py SumOf2SquaresAnd2Cubes.py params.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
 
-## How to run (Memory efficient )
+## How to download bitarray
 
 Because this program uses a large array of ones and zeroes it is more memory efficient but slower to use a bit array.
 
-The module to do this can be imported and v2 of the code uses this method, as follows:- 
-1. Download the file SumOf2SquaresAnd2Cubesv2.py and params.txt into a windows file.
+### 1. Install bitarray using pip ( Python install package)
 
-2. Install bitarray using pip ( Python install package)
    If you are using py   
       C:\Users\Mark>py -m ensurepip --upgrade
       Looking in links: c:\Users\Mark\AppData\Local\Temp\tmp8yul8agr
@@ -97,20 +100,7 @@ The module to do this can be imported and v2 of the code uses this method, as fo
         WARNING: The scripts pip.exe, pip3.10.exe and pip3.exe are installed in 'C:\Users\Mark\Downloads\pypy3.10-v7.3.15-win64\pypy3.10-v7.3.15-win64\Scripts' which is not on PATH.
         Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 
-   
-3. Edit the parameter file in notepad. The three rows mean:-
-   
-   3.1. First square root of n to be calculated.
-   
-   3.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
-
-   3.3. Maximum value of z that is checked. Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456.
-   
-4. In command prompt
-   py SumOf2SquaresAnd2CubesV2.py params.txt
-
-There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
-
+  
 ## How does it work
 
 The program splits into three main parts: the first two precalculate arrays which are used to optimise the third part. 
