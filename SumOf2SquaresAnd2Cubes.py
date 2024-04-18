@@ -21,6 +21,7 @@ progressfile.close()
 xfloorstart = 0
 xfloorend = 0
 zMax = 0
+usebitarray = 0
 for i in range(len(data)):
 	parmRow = data[i]
 	if re.search(r'Initial square root of n:(\d+)',parmRow):
@@ -33,6 +34,8 @@ for i in range(len(data)):
 	if re.search(r'Maximum value of z:(\d+)',parmRow):
 		strzMax = re.search(r'Maximum value of z:(\d+)',parmRow)
 		zMax = int(strzMax.group(1))
+	if re.search(r'Use bitarray:true',parmRow):
+		usebitarray = 1
 
 if ( xfloorstart == 0 ) :
 	print('Error. There should be a row in the parameter file matching Initial square root of n:nnnn but not found')
@@ -56,8 +59,21 @@ print('-------------------------------------------------------------------------
 squareShell = 2 * xfloorend + 1
 print('Calculating list of natural numbers up to ',squareShell,' which are not the sum of a square and two cubes...')
 squareShellRoot = math.floor(math.sqrt(squareShell)) + 1
+squareShellCubeRoot = math.floor(squareShell ** third) + 1
 
-sumOf2CubesandSquare = [0 for i in range(squareShell)] 
+if ( usebitarray == 1 ): 
+##############################################################################
+	print('Importing bitarray software')
+	print('If this fails use pip to import bitarray.')
+##############################################################################
+	from bitarray import bitarray
+	sumOf2CubesandSquare = bitarray(squareShell)
+	sumOf2CubesandSquare.setall(0)
+else:
+##############################################################################
+	print('Not importing bitarray software as per parameter file')
+##############################################################################
+	sumOf2CubesandSquare = [0 for i in range(squareShell)] 
 
 for i in range(squareShellRoot):
 	i2 = i ** 2
