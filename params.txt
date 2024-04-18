@@ -1,3 +1,4 @@
-Initial square root of n:2704752
-Final square root of n:500000000
-Maximum value of z:350
+Initial square root of n:141419
+Final square root of n:1000000000
+Maximum value of z:400
+Use bitarray:true
