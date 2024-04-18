@@ -52,9 +52,11 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 
 Because this program uses a large array of ones and zeroes it is more memory efficient but slower to use a bit array.
 
+In order to do this you need to install pip ( if it iosn't already installed ) which is the Python package installer and then install bitarray using pip:-
+
 ###  Install bitarray for py ( Python install package)
 
-   If you are using py   
+
       C:\Users\Mark>py -m ensurepip --upgrade
       Looking in links: c:\Users\Mark\AppData\Local\Temp\tmp8yul8agr
       Requirement already satisfied: pip in c:\users\mark\appdata\local\programs\python\python312\lib\site-packages (24.0)
@@ -129,5 +131,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
-| 2024-04-17 19:56  | 2024-04-18 16:49 | 9,290,267,424,036 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
+| 2024-04-17 19:56  | 2024-04-18 20:55 | 9,669,972,876,964 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 
