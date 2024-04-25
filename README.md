@@ -35,7 +35,12 @@ The attached Python program attempts to give a lower limit on n up to which this
         
         Syntax:- "Maximum value of z:{n}"
         
-      Note that this uses memory in proportion to the cube of this value. 30 is sufficient for n up to a million and 200 is sufficient for n up to 83 billion. 300 is sufficient for up to 3,209,056,635,456. 350 up to 9,761,900,355,216.
+      Note that this uses memory in proportion to the cube of this value:- 
+      30 is sufficient for n up to a million 
+      200 up to 83 billion. 
+      300 up to 3,209,056,635,456. 
+      350 up to 9,761,900,355,216, 
+      400 up to 23336783225856.
 
 #### 2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
           Required: No
@@ -131,5 +136,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
-| 2024-04-17 19:56  | 2024-04-25 17:01 | 23,276,823,055,236 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
+| 2024-04-17 19:56  | 2024-04-25 19:01 | 23,336,783,225,856 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 
