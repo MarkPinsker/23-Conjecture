@@ -51,8 +51,8 @@ zmaxCubed = zMax * zMax * zMax
 
 z = 0 
 third=1./3.
-print('Program to test the conjecture that 23 is the only positive integer that cannot be made by adding two squares and two positive cubes')
-print('------------------------------------------------------------------------------------------------------------------------------------')
+print('Program to test the conjecture that 23 is the only positive integer that is not the sum of two squares and two non-negative cubes')
+print('---------------------------------------------------------------------------------------------------------------------------------')
 ##############################################################################
 #sum of two cubes and a square
 ##############################################################################
@@ -77,6 +77,7 @@ else:
 
 for i in range(squareShellRoot):
 	i2 = i ** 2
+	print(i,' out of ',squareShellRoot,end='\r' )
 	remainder = squareShell - i2
 	squareShellCubeRoot = math.floor(remainder ** third) + 1
 	for j in range(squareShellCubeRoot):
