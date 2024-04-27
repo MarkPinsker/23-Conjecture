@@ -46,7 +46,9 @@ The attached Python program attempts to give a lower limit on n up to which this
           Required: No
            
            Syntax: "Use bitarray:true"
-           In order to use this yuo need to make the bitarray module available to Python - see the section "Download bitarray".
+           In order to use this yuo need to make the bitarray module available to Python.
+
+See the section [Download bitarray](Download%20bitarray.md)
    
 ### 3. In command prompt
 
