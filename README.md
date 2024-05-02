@@ -5,7 +5,7 @@ Conjecture: 23 is the only positive integer for which \$n = x^2 + y^2 + z^3 + w^
 It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that \$n = x^2 + y^2 + z^2 + w^2$ always has integer solutions for all positive n.
 It is also proven that \$n = x^2 + y^2 + z^2 + w^3$ also always has integer solutions.
 But what about \$n = x^2 + y^2 + z^3 + w^3$ ?
-If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 38 trillion and not found any counter examples.
+If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 39 trillion and not found any counter examples.
 
 Professor Trevor Wooley of Bristol university replied to my email on the subject on 11th April 2011:-
 
@@ -85,5 +85,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-03 16:16 | 135,586,000,000 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v1|
-| 2024-04-17 19:56  | 2024-05-02 05:20 | 38,028,694,561,081 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
+| 2024-04-17 19:56  | 2024-05-02 17:08 | 39,058,062,626,025 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 v2|
 
