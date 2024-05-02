@@ -1,4 +1,4 @@
-# Warings
+# 23 Conjecture
 Conjecture: 23 is the only positive integer for which \$n = x^2 + y^2 + z^3 + w^3$ has no solution with non-negative x,y,z,w.
 
 ## Why
