@@ -41,6 +41,7 @@ The attached Python program attempts to give a lower limit on n up to which this
       300 up to 3,209,056,635,456. 
       350 up to 9,761,900,355,216, 
       400 up to 23,336,783,225,856.
+      450 up to 48,851,530,635,769
 
 #### 2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
           Required: No
