@@ -20,7 +20,7 @@ The attached Python program attempts to give a lower limit on n up to which this
 ## How to run
 ### 1. Download the files in [23-con](https://github.com/MarkPinsker/23-Conjecture) into a windows folder.
 
-### 2. Edit Config-readfile.txt file in notepad. The following three rows must be present:-
+### 2. Edit Config-readfile.txt file in notepad. The first three parameters are mandatory:-
    
 #### 2.1. First square root of n to be calculated. 
         Required: Yes
@@ -50,6 +50,16 @@ The attached Python program attempts to give a lower limit on n up to which this
            
 In order to use this you need to make the bitarray module available to Python.
 See the section [Download bitarray](Download%20bitarray.md)
+
+#### 2.5. Log file name
+          Required: No
+        
+         Syntax: Log file name:{filename}"
+
+#### 2.6. A022557 filename
+          Required: No
+        
+         Syntax: "A022557 filename:{filename}"
    
 ### 3. Run the program
 
