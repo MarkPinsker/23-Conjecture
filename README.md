@@ -45,10 +45,10 @@ The attached Python program attempts to give a lower limit on n up to which this
 
 #### 2.4. Use of bitarray. If this parameter is set to true then the program will import bitarray which will reduce the memory usage of the program but will only work if bitarray has been downloaded. 
           Required: No
+        
+         Syntax: "Use bitarray:true"
            
-           Syntax: "Use bitarray:true"
-           In order to use this yuo need to make the bitarray module available to Python.
-
+In order to use this you need to make the bitarray module available to Python.
 See the section [Download bitarray](Download%20bitarray.md)
    
 ### 3. Run the program
