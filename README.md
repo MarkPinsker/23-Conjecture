@@ -67,7 +67,7 @@ See the section [Download bitarray](Download%20bitarray.md)
    
 ### 3. Run the program
 
-Start up commasnd prompt and if you using standard Python enter:-
+Start up command prompt and if you using standard Python enter:-
 
    py 23Conjecture.py Config-readfile.txt
 
@@ -96,8 +96,8 @@ For example if the file goes up to 50 billion then 88,579,424 (less than 0.2%) i
 
 ### 3. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
-1. Loop through groups of square shells. The next square side is determined by adding twice the last square side to the previous one.
-2. Loop through n from inner to outer square shell, but only using increments which can not be written as \$y^2 + z^3 +w^3$ 
+1. Loop through square root of n by "lookahead limit". The next n will be the highest square less than previous n plus lookahead.
+2. Loop through "possible" values of n using increments which can not be written as \$y^2 + z^3 +w^3$ 
 3. Loop through x from square root of n downwards.
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
