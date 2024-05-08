@@ -5,7 +5,7 @@ Conjecture: 23 is the only positive integer for which \$n = x^2 + y^2 + z^3 + w^
 It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that \$n = x^2 + y^2 + z^2 + w^2$ always has integer solutions for all positive n.
 It is also proven that \$n = x^2 + y^2 + z^2 + w^3$ also always has integer solutions.
 But what about \$n = x^2 + y^2 + z^3 + w^3$ ?
-If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 51 trillion and not found any counter examples.
+If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture up to n equals 53 trillion and not found any counter examples.
 
 Professor Trevor Wooley of Bristol university replied to my email on the subject on 11th April 2011:-
 
@@ -82,7 +82,7 @@ The third part loops through values of n and finds candidate values of x, y, z a
 See [OEIS A022557](https://oeis.org/A022557)
 It is faster to read this list of numbers from a file in which case you can specify this filename in the configuration file. 
 The file A022557.txt is an example but the bigger the file the more efficient the search.
-For example if the file goes up to 50 billion then less than 0.1% of integers are represented, so the search would be over 1000 times faster than if this file wasn't used.
+For example if the file goes up to 50 billion then 88,579,424 (less than 0.2%) integers are represented, so the search would be over 564 times faster than if this file wasn't used.
 
 ### 2. Calculate for every positive integer up to cube of maximum z parameter if sum of two cubes
 
@@ -105,5 +105,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-17 19:56  | 2024-05-06 20:05 | 48,851,530,635,769 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
-| 2024-05-07 19:56  | 2024-05-08 06:20 | 51,651,143,518,129 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
+| 2024-05-07 19:56  | 2024-05-08 14:41 | 53,600,891,915,169 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
 
