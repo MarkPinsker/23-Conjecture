@@ -57,9 +57,13 @@ See the section [Download bitarray](Download%20bitarray.md)
          Syntax: Log file name:{filename}"
 
 #### 2.6. A022557 filename
-          Required: No
+          Required: Either this or lookahead limit
         
          Syntax: "A022557 filename:{filename}"
+
+#### 2.7. Lookahead limit
+      Required: Either this or A022557 filename
+      Syntax: "Lookahead limit:{n}"
    
 ### 3. Run the program
 
@@ -80,7 +84,11 @@ The third part loops through values of n and finds candidate values of x, y, z a
 
 ### 1. Calculate all positive integers up to a specified limit which cannot be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
-It is faster to read this list of numbers from a file in which case you can specify this filename in the configuration file. 
+It is faster to read this list of numbers from a file in which case you can specify this filename in the configuration file by specifying "A022557 filename".
+If you don't specify a filename then it will use the value of "Lookahead limit" you specify and calculate A022557 up to that. 
+
+
+
 The file A022557.txt is an example but the bigger the file the more efficient the search.
 For example if the file goes up to 50 billion then 88,579,424 (less than 0.2%) integers are represented, so the search would be over 564 times faster than if this file wasn't used.
 
