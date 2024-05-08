@@ -18,9 +18,9 @@ Professor Trevor Wooley of Bristol university replied to my email on the subject
 The attached Python program attempts to give a lower limit on n up to which this conjecture is true.
 
 ## How to run
-### 1. Download the file SumOf2SquaresAnd2Cubes.py and params.txt into a windows file.
+### 1. Download the files in [23-con](https://github.com/MarkPinsker/23-Conjecture) into a windows folder.
 
-### 2. Edit the parameter file in notepad. The following three rows must be present:-
+### 2. Edit Config-readfile.txt file in notepad. The following three rows must be present:-
    
 #### 2.1. First square root of n to be calculated. 
         Required: Yes
@@ -53,9 +53,12 @@ See the section [Download bitarray](Download%20bitarray.md)
    
 ### 3. In command prompt
 
-   py SumOf2SquaresAnd2Cubes.py params.txt
+   py 23Conjecture.py Config-readfile.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
+In this case use
+
+   pypy 23Conjecture.py Config-readfile.txt
 
  
 ## How does it work
@@ -63,8 +66,11 @@ There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which
 The program splits into three main parts: the first two precalculate arrays which are used to optimise the third part. 
 The third part loops through values of n and finds candidate values of x, y, z and w which rule n out as a sum of two squares and two positive cubes.
 
-### 1. Calculate all positive integers up to specified limit which cannot be written as \$y^2 + z^3 +w^3$
+### 1. Calculate all positive integers up to a specified limit which cannot be written as \$y^2 + z^3 +w^3$
 See [OEIS A022557](https://oeis.org/A022557)
+It is faster to read this list of numbers from a file in which case you can specify this filename in the configuration file. 
+The file A022557.txt is an example but the bigger the file the more efficient the search.
+For example if the file goes up to 50 billion then less than 0.1% of integers are represented, so the search would be over 1000 times faster than if this file wasn't used.
 
 ### 2. Calculate for every positive integer up to cube of maximum z parameter if sum of two cubes
 
