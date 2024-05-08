@@ -83,14 +83,14 @@ The program splits into three main parts: the first two precalculate arrays whic
 The third part loops through values of n and finds candidate values of x, y, z and w which rule n out as a sum of two squares and two positive cubes.
 
 ### 1. Calculate all positive integers up to a specified limit which cannot be written as \$y^2 + z^3 +w^3$
-See [OEIS A022557](https://oeis.org/A022557)
-It is faster to read this list of numbers from a file in which case you can specify this filename in the configuration file by specifying "A022557 filename".
-If you don't specify a filename then it will use the value of "Lookahead limit" you specify and calculate A022557 up to that. 
+See [OEIS A022557](https://oeis.org/A022557).
+It is faster to read this sequence from a file than to calculate it from scratch every time you run the program. If you wish to read the sequence from a preprepared file specify the filename in the configuration file by specifying "A022557 filename".
+If you don't specify a filename then the 23Conjecture.py program will use the value of "Lookahead limit" you specify and calculate the A022557 sequence up to that. 
 
-
-
-The file A022557.txt is an example but the bigger the file the more efficient the search.
-For example if the file goes up to 50 billion then 88,579,424 (less than 0.2%) integers are represented, so the search would be over 564 times faster than if this file wasn't used.
+The file A022557.txt is an example which lists the sequence up to 10,000,000, but Github has a filesize limit so I can't supply a bigger file.
+If you can generate a bigger file it will speed up the search for counterexamples.
+The program called A022557write.py does just that.
+For example if the A022557 file goes up to 50 billion then it will have 88,579,424 rows (less than 0.2%), so the counterexample search would be over 564 times faster than if this file wasn't used.
 
 ### 2. Calculate for every positive integer up to cube of maximum z parameter if sum of two cubes
 
