@@ -89,7 +89,7 @@ If you don't specify a filename then the 23Conjecture.py program will use the va
 
 The file A022557.txt is an example which lists the sequence up to 10,000,000, but Github has a filesize limit so I can't supply a bigger file.
 If you can generate a bigger file it will speed up the search for counterexamples.
-The program called A022557write.py does just that.
+The program called [writeA022557.py](https://github.com/MarkPinsker/23-Conjecture/blob/main/writeA022557.py) allows you to append more elements in the sequence to the file.
 For example if the A022557 file goes up to 50 billion then it will have 88,579,424 rows (less than 0.2%), so the counterexample search would be over 564 times faster than if this file wasn't used.
 
 ### 2. Calculate for every positive integer up to cube of maximum z parameter if sum of two cubes
