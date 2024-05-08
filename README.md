@@ -51,12 +51,14 @@ The attached Python program attempts to give a lower limit on n up to which this
 
 See the section [Download bitarray](Download%20bitarray.md)
    
-### 3. In command prompt
+### 3. Run the program
+
+Start up commasnd prompt and if you using standard Python enter:-
 
    py 23Conjecture.py Config-readfile.txt
 
 There is a jit compiler called [pypy](https://www.pypy.org/download.html)  which on my machine runs 7 times faster than standard windows Python.
-In this case use
+If you have this installed run:-
 
    pypy 23Conjecture.py Config-readfile.txt
 
