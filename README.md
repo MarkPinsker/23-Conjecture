@@ -106,9 +106,11 @@ This section has 4 nested loops:-
    
 3. Loop through x from square root of n downwards.
 
-      Example: if n is \$226 = 14^2 + 30$ then values of x would be which might generate a counterexample are \$15,14,13,\ldots, 0$.   
+      Example: if n is \$236 = 14^2 + 40$ then values of x would be which might generate a counterexample are \$15,14,13,\ldots, 0$.   
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
+      Example: if n is 236 and x = 15 then values of y would be which might generate a counterexample are \$3,2,1,0$, and the corresposding values of r are  \$236-15^2-3^2=2,236-15^2-2^2=7, 236-15^2-1^2=10,236-15^2-0^2=11.$
+   As r=2 is the sum of two cubes then 236 is not a counterexample.    
 
 ## Results
    
