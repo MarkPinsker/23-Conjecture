@@ -109,7 +109,7 @@ This section has 4 nested loops:-
       Example: if n is \$236 = 14^2 + 40$ then values of x would be which might generate a counterexample are \$15,14,13,\ldots, 0$.   
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
-      Example: if n is 236 and x = 15 then values of y would be which might generate a counterexample are \$3,2,1,0$, and the corresposding values of r are  \$236-15^2-3^2=2,236-15^2-2^2=7, 236-15^2-1^2=10,236-15^2-0^2=11.$
+      Example: if n is 236 and x = 15 then values of y would be which might generate a counterexample are \$3,2,1,0$, and the corresponding values of r are  \$236-15^2-3^2=2,236-15^2-2^2=7, 236-15^2-1^2=10,236-15^2-0^2=11.$
    As r=2 is the sum of two cubes then 236 is not a counterexample.    
 
 ## Results
@@ -123,5 +123,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-17 19:56  | 2024-05-06 20:05 | 48,851,530,635,769 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
-| 2024-05-07 19:56  | 2024-05-10 11:55 | 61,999,608,284,289 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
+| 2024-05-07 19:56  | 2024-05-10 23:55 | 64,499,193,637,321 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
 
