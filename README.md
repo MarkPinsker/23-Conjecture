@@ -102,7 +102,7 @@ This section has 4 nested loops:-
 2. Loop through "possible" values of n using increments which can not be written as \$y^2 + z^3 +w^3$
 
 
-      Example: if sqrt n is 14 and the lookahead limit is 100, then values of n which might generate a counterexample are \$14^2 +7 , 14^2+14 , 14^2 + 15, 14^2 + 19,\ldots, 1462 + 98$.
+      Example: if sqrt n is 14 and the lookahead limit is 100, then values of n which might generate a counterexample are \$14^2 +7 , 14^2+14 , 14^2 + 15, 14^2 + 19,\ldots, 14^2 + 98$.
    
 3. Loop through x from square root of n downwards.
 
