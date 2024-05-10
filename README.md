@@ -102,10 +102,11 @@ This section has 4 nested loops:-
 2. Loop through "possible" values of n using increments which can not be written as \$y^2 + z^3 +w^3$
 
 
-      Example: if sqrt n is 14 and the lookahead limit is 100, then values of n which might generate a counterexample are \$14^2 +7 , 14^2+14 , 14^2 + 15, 14^2 + 19,\ldots$
+      Example: if sqrt n is 14 and the lookahead limit is 100, then values of n which might generate a counterexample are \$14^2 +7 , 14^2+14 , 14^2 + 15, 14^2 + 19,\ldots, 1462 + 98$.
    
 3. Loop through x from square root of n downwards.
-   
+
+      Example: if n is \$226 = 14^2 + 30$ then values of x would be which might generate a counterexample are \$15,14,13,\ldots, 0$.   
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
 
