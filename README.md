@@ -97,9 +97,11 @@ For example if the A022557 file goes up to 50 billion then it will have 88,579,4
 ### 3. Loop through values of n finding values of x,y,z,w such that \$n = x^2 + y^2 + z^3 + w^3$
 This section has 4 nested loops:-
 1. Loop through square root of n by "lookahead limit". The next n will be the highest square less than previous n plus lookahead.
-2. Loop through "possible" values of n using increments which can not be written as \$y^2 + z^3 +w^3$ 
-3. Loop through x from square root of n downwards.
-4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
+
+      Example: if you start on 1 and the lookahead limit is 100, then  square root of n will be 1, 10 ( because \$10^2 < 1 + 100$ ), 14 ( because \$14^2 < 10^2 + 100$ ) , 17 ( because \$17^2 < 14^2 + 100$ ) , etc.
+3. Loop through "possible" values of n using increments which can not be written as \$y^2 + z^3 +w^3$ 
+4. Loop through x from square root of n downwards.
+5. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
 
 ## Results
