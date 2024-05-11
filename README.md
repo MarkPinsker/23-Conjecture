@@ -102,15 +102,15 @@ This section has 4 nested loops:-
 2. Loop through "possible" values of n using increments which can not be written as \$y^2 + z^3 +w^3$
 
 
-      Example: if sqrt n is 14 and the lookahead limit is 100, then values of n which might generate a counterexample are \$14^2 +7 , 14^2+14 , 14^2 + 15, 14^2 + 19,\ldots, 14^2 + 98$.
+      Example: if square root of n is 14 and the lookahead limit is 100, then values of n which might generate a counterexample are \$14^2 +7 , 14^2+14 , 14^2 + 15, 14^2 + 19,\ldots, 14^2 + 98$.
    
 3. Loop through x from square root of n downwards.
 
-      Example: if n is \$236 = 14^2 + 40$ then values of x would be which might generate a counterexample are \$15,14,13,\ldots, 0$.   
+      Example: if \$n=14^2+40=236$ then values which might generate a counterexample are \$x<=\sqrt{236}$ or \$x \in \\{ 15,14,13,\ldots, 0 \\} $.   
 4. Loop though y ( Highest to lowest ). For each y calculate residual \$r = n - x^2 - y^2$ and check to see if residual is listed as sum of two cubes.
 
-      Example: if n is 236 and x = 15 then values of y would be which might generate a counterexample are \$3,2,1,0$, and the corresponding values of r are  \$236-15^2-3^2=2,236-15^2-2^2=7, 236-15^2-1^2=10,236-15^2-0^2=11.$
-   As r=2 is the sum of two cubes then 236 is not a counterexample.    
+      Example: if n is 236 and x = 15 then values of y would be which might generate a counterexample are \$3,2,1,0$, and the corresponding values of r are  \$236-15^2-3^2=2$ , \$236-15^2-2^2=7$ , \$236-15^2-1^2=10$ , and \$236-15^2-0^2=11.$
+   As the first residual r=2 is the sum of two cubes then 236 is not a counterexample so only y = 3 needs to be processed.    
 
 ## Results
    
