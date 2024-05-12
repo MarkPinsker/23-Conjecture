@@ -26,7 +26,7 @@ The attached Python program attempts to give a lower limit on n up to which this
         Required: Yes
         Syntax:- "Initial square root of n:{n}"
    
-#### 2.2. Last square root of n to be calculated. Note that this initially uses memory in proportion to twice its value. 
+#### 2.2. Last square root of n to be calculated. 
         Required: Yes
         Syntax:- "Final square root of n:{n}"
 
@@ -62,6 +62,8 @@ See the section [Download bitarray](Download%20bitarray.md)
          Syntax: "A022557 filename:{filename}"
 
 #### 2.7. Lookahead limit
+Note that this value is limited by the amount of memory available to the program.
+
       Required: Either this or A022557 filename
       Syntax: "Lookahead limit:{n}"
    
