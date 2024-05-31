@@ -177,6 +177,7 @@ while ( sqrtN < finalSqrtN ):
 
 	increment = 0	
 	n = sqrtN2 + NotSumOf1Squaresand2Cubes[increment]
+	outputcount = 0
 
 	while ( n < nextfloor2 ):
 		notFound = True
@@ -204,7 +205,12 @@ while ( sqrtN < finalSqrtN ):
 			outputlog.write(str(n) + ' is not x^2 + y^2 + z^3 + w^3\n')
 		increment = increment  + 1
 		n = sqrtN2 + NotSumOf1Squaresand2Cubes[increment]
-	
+		outputcount = outputcount + 1
+# Output progress every 10000 
+		if ( outputcount == 10000 ):
+			outputcount = 0
+			progressString = 'n = ' + "{:,}".format(n)
+			print(progressString,end='\r')
 	sqrtN = nextfloor
 
 outputlog.close()
