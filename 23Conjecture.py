@@ -74,7 +74,7 @@ print('Logs will be printed to ', outputlogname)
 #sum of two cubes and a square
 ##############################################################################
 
-print('Calculating list of natural numbers up to ',LookAheadLimit,' which are not the sum of a square and two cubes...')
+
 squareShellRoot = math.floor(math.sqrt(LookAheadLimit)) + 1
 squareShellCubeRoot = math.floor(LookAheadLimit ** third) + 1
 
@@ -98,7 +98,7 @@ if ( A022557Filename != '' ):
 		sys.exit(7)	
 else:
 ##############################################################################
-	print('Generating list of numbers which are not sum of square and two positive cubes')
+	print('Calculating list of natural numbers up to ',LookAheadLimit,' which are not the sum of a square and two cubes...')
 ##############################################################################
 	if ( usebitarray == 1 ): 
 ##############################################################################
@@ -167,8 +167,9 @@ while ( sqrtN < finalSqrtN ):
 	sqrtN2 = sqrtN * sqrtN
 	nextfloor = math.floor(math.sqrt(sqrtN2 + LookAheadLimit ) )
 	nextfloor2 = nextfloor * nextfloor
+	progressString = 'n = ' + "{:,}".format(sqrtN2)
 
-	print('n = ', sqrtN2,end='\r')
+	print(progressString,end='\r')
 	outputlog.write(str(sqrtN) + "\n")
 	data[parmRowNo]='Initial square root of n:' + str(sqrtN)+"\n"
 	with open(progressfilename, 'w', encoding='utf-8') as progressfile: 
