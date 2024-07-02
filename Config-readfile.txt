@@ -1,6 +1,6 @@
-Initial square root of n:7190350
+Initial square root of n:16844664
 Final square root of n:5000000000
-Maximum value of z:600
+Maximum value of z:800
 Use bitarray:true
 Log file name:testlog.txt
 A022557 filename:A022557.txt 
