@@ -126,5 +126,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-17 19:56  | 2024-05-06 20:05 | 48,851,530,635,769 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
-| 2024-05-07 19:56  | 2024-07-19 12:36 | 350,063,673,715,009 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
+| 2024-05-07 19:56  | 2024-07-26 14:22 | 376,300,603,478,760 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
 
