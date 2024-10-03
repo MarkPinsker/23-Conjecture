@@ -5,7 +5,7 @@ Conjecture: 23 is the only positive integer for which \$n = x^2 + y^2 + z^3 + w^
 It is a well know result proven by <a href="https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem">Lagrange</a> in 1770 that \$n = x^2 + y^2 + z^2 + w^2$ always has integer solutions for all positive n.
 It is also proven that \$n = x^2 + y^2 + z^2 + w^3$ also always has integer solutions.
 But what about \$n = x^2 + y^2 + z^3 + w^3$ ?
-If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture for all values of n up to over 576 trillion and not found any counter examples.
+If the cubes are positive then there is a conjecture that they can be any natural number except 23. So far this program has checked this conjecture for all values of n up to over 600 trillion and not found any counter examples.
 
 Professor Trevor Wooley of Bristol university replied to my email on the subject on 11th April 2011:-
 
@@ -126,5 +126,5 @@ This section has 4 nested loops:-
 | 2024-04-02 20:45  | 2024-04-10 21:28 | 799,795,741,969 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-11 06:24  | 2024-04-16 18:19 | 7,307,722,758,400 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
 | 2024-04-17 19:56  | 2024-05-06 20:05 | 48,851,530,635,769 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | SumOf2SquaresAnd2Cubes.py |
-| 2024-05-07 19:56  | 2024-09-25 11:26 | 576,852,168,793,389 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
+| 2024-05-07 19:56  | 2024-10-03 17:45 | 600,063,230,770,341 | Mark Pinsker | i7-6700 CPU@3.40GHz | Python pypy3.10-v7.3.15-win64 | 23Conjecture.py |
 
